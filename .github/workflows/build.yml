@@ -37,5 +37,5 @@ jobs:
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
         run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=ltifour-ynov-backend -Dsonar.projectName=ltifour-ynov-backend
       - name: SonarQube Scan
-        run: mvn clean verify sonar:sonar -Dsonar.projectKey=jallain-ynov-backend -Dsonar.host.url=https://sonarqube-coe.westeuro -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+        run: mvn clean verify sonar:sonar -Dsonar.projectKey=ltifour-ynov-backend  -Dsonar.projectName=ltifour-ynov-backend -Dsonar.host.url=https://sonarqube-coe.westeurope.cloudapp.azure.com -Dsonar.login=${{ secrets.SONAR_TOKEN }}
       
